@@ -9,17 +9,15 @@ public class Main {
         int counter = 0;
         int guess = rand.nextInt(100);
         guess += 1;
-/*        System.out.println(
-                guess
-        );*/
+
         int playersguess = 0;
-        boolean invalid = false;
+
         Scanner input = new Scanner(System.in);
         System.out.println("\nPlease enter your name: ");
         String playersname = input.nextLine();
         System.out.println("\nDear " + playersname + " have fun playing this game!");
 
-            //Scanner input = new Scanner(System.in);
+
         do {
             System.out.println("\nEnter your guess: ");
             playersguess = input.nextInt();
@@ -28,7 +26,7 @@ public class Main {
             if (playersguess <= 0 || playersguess > 100) {
                 System.out.println("Invalid guess.");
                 System.out.println("Your guess must be between 1 and 100!");
-                invalid = true;
+
                 counter = counter -1;
             }
             if (playersguess < guess & playersguess > 0) {
